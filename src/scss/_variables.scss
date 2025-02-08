@@ -1,0 +1,65 @@
+@use "sass:math";
+
+// material lighter theme colors
+
+$bg-primary: #fafafa;
+$fg-primary: #546e7a;
+$text-primary: #94a7b0;
+$bg-selection: #80cbc440;
+$fg-selection: #546e7a;
+$bg-button: #f3f4f5;
+$bg-secondary: #ffffff;
+$bg-body: #eeeeee;
+$disabled: #d2d4d5;
+$hover: #e7e7e8;
+$border: #d3e1e8;
+$highlight: #e7e7e8;
+$active: #00bcd4;
+$green: #91b859;
+$yellow: #f6a434;
+$blue: #6182b8;
+$red: #e53935;
+$purple: #7c4dff;
+$orange: #f76d47;
+$cyan: #39adb5;
+$error: #e53935;
+$inversed: #94a7b0;
+
+/* SPACING - padding, margin and gaps */
+
+$spacer-base: 0.5rem; // 8px
+$spacer-xs: math.div($spacer-base, 2); // 4px
+$spacer-sm: math.div($spacer-base, 1.5); // 5.33px
+$spacer-md: $spacer-base * 1.5; // 12px
+$spacer-lg: $spacer-base * 2; // 16px
+$spacer-xl: $spacer-base * 3; // 24px
+$spacer-2xl: $spacer-base * 4; // 32px)
+$spacer-3xl: $spacer-base * 5; // 40px
+$spacer-4xl: $spacer-base * 6; // 48px
+$spacer-5xl: $spacer-base * 7; // 56px
+$spacer-6xl: $spacer-base * 8; // 64px
+
+/* FONT */
+
+$font-base: 1rem; // 16px
+$font-xs: math.div($font-base, 1.25); // 12.8px
+$font-sm: math.div($font-base, 1.125); // 14.22px
+$font-md: $font-base * 1.125; // 18px
+$font-lg: $font-base * 1.25; // 20px
+$font-xl: $font-base * 1.5; // 24px
+$font-2xl: $font-base * 1.875; // 30px
+$font-3xl: $font-base * 2.25; // 36px
+$font-4xl: $font-base * 3; // 48px
+$font-5xl: $font-base * 3.75; // 60px
+
+/* BORDER RADIUS */
+
+$border-base-radius: 0.5rem;
+$border-xs-radius: math.div($border-base-radius, 2); // 4px
+$border-sm-radius: math.div($font-base, 1.5); // 5.33px
+$border-md-radius: $spacer-base * 1.5; // 12px
+$border-lg-radius: $spacer-base * 2; // 16px
+$border-xl-radius: $spacer-base * 3; // 24px
+$border-2xl-radius: $spacer-base * 4; // 32px
+$border-3xl-radius: $spacer-base * 5; // 40px
+$border-rounded: 50%; // rounded circle

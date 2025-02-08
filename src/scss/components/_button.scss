@@ -1,0 +1,13 @@
+.btn {
+  padding: $spacer-md $spacer-xl;
+  border: 1px solid $active;
+  border-radius: $border-base-radius;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  @extend .btn;
+  background: $active;
+  color: $fg-selection;
+}

@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+:host {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  padding: $spacer-3xl;
+  border-radius: $border-md-radius;
+  max-width: 415px;
+  background: $bg-primary;
+  display: flex;
+  flex-direction: column;
+  gap: $spacer-3xl;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer-base;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer-xl;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  label {
+    font-size: $font-xs;
+  }
+}
+
+.btn-primary {
+  width: 100%;
+}

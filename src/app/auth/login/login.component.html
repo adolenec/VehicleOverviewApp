@@ -1,1 +1,41 @@
-<p>login works!</p>
+<form class="form" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+  <div class="form-header">
+    <h2>Login</h2>
+    <span>Add your details below to get back into the app.</span>
+  </div>
+  <div class="form-group">
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        pInputText
+        formControlName="username"
+        placeholder="e.g. john.doe"
+      />
+      <span
+        *ngIf="getControl('username').errors?.['required'] && shouldDisplayError('username')"
+        class="text-invalid"
+      >
+        Username is required
+      </span>
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        pInputText
+        formControlName="password"
+        placeholder="Enter your password"
+      />
+      <span
+        *ngIf="getControl('password').errors?.['invalidPass'] && shouldDisplayError('password')"
+        class="text-invalid"
+      >
+        {{getControl('password').errors?.['invalidPass']}}
+      </span>
+    </div>
+    <button class="btn-primary" type="submit">Login</button>
+  </div>
+</form>

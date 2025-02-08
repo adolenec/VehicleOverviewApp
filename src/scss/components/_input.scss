@@ -1,0 +1,34 @@
+.p-inputtext {
+  background: $bg-secondary;
+  border: 1px solid $border;
+  outline: none;
+  box-shadow: none;
+  height: 3rem;
+  font-family: inherit;
+  font-size: $font-sm;
+  color: $text-primary;
+  border-radius: $border-base-radius;
+  width: 100%;
+  transition: none;
+
+  &::placeholder {
+    color: $text-primary;
+  }
+
+  &.ng-dirty.ng-invalid {
+    border-color: $border;
+  }
+
+  &.ng-invalid.ng-touched {
+    border-color: $error;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

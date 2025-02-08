@@ -1,7 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+//primeng
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 // variables, mixins and functions
 @import "scss/variables";
 
 // base and layout
 @import "scss/base";
+
+//components
+@import "scss/components/button";
+@import "scss/components/input";

@@ -11,3 +11,15 @@
   background: $active;
   color: $fg-selection;
 }
+
+.btn-outlined {
+  @extend .btn;
+  background: none;
+  color: $active;
+
+  &:active,
+  &:hover {
+    background: $active;
+    color: $fg-selection;
+  }
+}

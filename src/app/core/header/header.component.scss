@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacer-xl;
+  background: $bg-primary;
+}

@@ -1,2 +1,44 @@
 <app-header />
-<p>vehicles works!</p>
+<div
+  class="table-container"
+  *ngIf="vehicleService.vehicles$ | async as vehicles"
+>
+  <input
+    type="text"
+    pInputText
+    placeholder="Search for vehicles..."
+    (input)="onSearch($event)"
+  />
+  <p-table [value]="vehicles" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Type</th>
+        <th>Fuel Type</th>
+        <th>License Plate</th>
+        <th>Active</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-vehicle>
+      <tr>
+        <td>{{ vehicle.name | vehicleName }}</td>
+        <td>{{ vehicle.manufacturer }}</td>
+        <td>{{ vehicle.model }}</td>
+        <td>{{ vehicle.year }}</td>
+        <td>{{ vehicle.type }}</td>
+        <td>{{ vehicle.fuelType }}</td>
+        <td>{{ vehicle.licensePlate }}</td>
+        <td>
+          <i
+            class="pi"
+            [class.pi-check-circle]="vehicle.active"
+            [class.pi-times-circle]="!vehicle.active"
+          ></i>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

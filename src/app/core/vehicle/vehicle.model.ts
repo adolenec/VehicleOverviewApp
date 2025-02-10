@@ -11,3 +11,5 @@ export interface VehicleModel {
   readonly licensePlate: string;
   readonly active: boolean;
 }
+
+export type VehicleListItem = Omit<VehicleModel, 'mileage' | 'price' | 'color'>;
